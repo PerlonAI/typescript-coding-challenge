@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 /**
- * Mid-Level Full-Stack Coding Assessment (60 minutes total)
+ * Typescript Coding Assessment (60 minutes total)
  *
  * Goal: assess correctness-first thinking, debugging skill, data-structure choice,
  * and clear code. Keep code tidy and add brief comments where helpful.
