@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 /**
  * Typescript Coding Assessment (60 minutes total)
  *
@@ -62,11 +60,11 @@ export function findTrendChangePoints(_nums: number[]): number[] {
 
 // Part 1 property-style tests (non-leaky: verify invariants, not exact indices)
 function isNonDecreasing(a: number[]): boolean {
-  for (let i = 0; i + 1 < a.length; i++) if (a[i] > a[i + 1]) return false;
+  for (let i = 0; i + 1 < a.length; i++) if (a[i]! > a[i + 1]!) return false;
   return true;
 }
 function isNonIncreasing(a: number[]): boolean {
-  for (let i = 0; i + 1 < a.length; i++) if (a[i] < a[i + 1]) return false;
+  for (let i = 0; i + 1 < a.length; i++) if (a[i]! < a[i + 1]!) return false;
   return true;
 }
 function segmentsFromChangePoints(nums: number[], cps: number[]): number[][] {
@@ -277,8 +275,8 @@ export function findUniquePairs(
   const pairs: [number, number][] = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
-      if (arr[i] + arr[j] === target) {
-        pairs.push([arr[i], arr[j]]);
+      if (arr[i]! + arr[j]! === target) {
+        pairs.push([arr[i]!, arr[j]!]);
       }
     }
   }
