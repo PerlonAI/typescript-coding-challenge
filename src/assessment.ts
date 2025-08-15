@@ -54,7 +54,7 @@ function assertTrue(name: string, cond: boolean) {
  * - Output indices must be unique and strictly increasing.
  */
 export function findTrendChangePoints(_nums: number[]): number[] {
-  // TODO: implement single-pass O(N) solution per the spec
+  // TODO: Implement the function
   return [];
 }
 
@@ -147,23 +147,25 @@ export interface ParkingSpot {
 
 export class ParkingGarage {
   private spots: Map<string, ParkingSpot> = new Map(); // key = `${floor}:${spot}`
-  // private _carIndex: Map<string, string> = new Map(); // carId -> spotKey
+  private _carIndex: Map<string, string> = new Map(); // carId -> spotKey
 
   constructor() {
     this.initializeGarage();
   }
 
-  // private _key(_floor: number, _spot: number): string { return `${_floor}:${_spot}`; }
+  private _key(_floor: number, _spot: number): string {
+    return `${_floor}:${_spot}`;
+  }
 
   private initializeGarage(): void {
     // TODO: Implement the fixed layout per spec (no answers provided)
     // for floor in 1..5, spot in 1..20, assign sizes as specified and insert into this.spots
   }
 
-  // private _compatible(_car: CarSize, _spot: SpotSize): boolean {
-  //   // TODO: Implement compatibility rules from the spec
-  //   return false;
-  // }
+  private _compatible(_car: CarSize, _spot: SpotSize): boolean {
+    // TODO: Implement compatibility rules from the spec
+    return false;
+  }
 
   /**
    * Find optimal spot per rules. Does NOT park the car.
