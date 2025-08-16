@@ -1,3 +1,3 @@
-import { runAllTests } from "./assessment";
+import { runAllTests } from "./runner";
 
 runAllTests();
